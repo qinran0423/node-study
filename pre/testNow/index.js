@@ -1,7 +1,13 @@
-const { extname } = require('path');
 const path = require('path')
-
+const fs = require('fs');
 module.exports = class TestNow {
+
+
+  genJestSource(sourcePath = path.resolve('./')){
+    
+  }
+
+
   getTestSource(methodName, classFile, isClass = false) {
     console.log('getTestSource:', methodName);
     return `
