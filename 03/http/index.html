@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+  (async () => {
+    axios.defaults.baseURL = 'http://localhost:4000'
+    axios.defaults.withCredentials = true
+    const res = await axios.get("/api/users", {
+      headers: {"X-Token": 'randy'}
+    })
+    console.log('data', res.data)
+    document.writeln(`Response : ${JSON.stringify(res.data)}`)
+  })()
+</script>
+
+</html>
