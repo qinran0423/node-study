@@ -21,21 +21,27 @@ const spawn = async (...args) => {
   })
 }
 
+// github:qinran0423/vue-template
+
 module.exports = async name => {
   // 打印欢迎界面
   clear()
   const data = await figlet('Ran Welcome')
   log(data)
   log(`🚀创建项目:` + name)
-  await clone('github:qinran0423/vue-template', name)
+  // await clone('github:qinran0423/vue-template', name)
   log('安装依赖')
-  await spawn('npm', ['install'], { cwd: `./${name}` })
-  log(`
-👌安装完成：
-To get Start:
-===========================
-    cd ${name}
-    npm run serve
-===========================
-            `)
+  // await spawn(process.platform === 'win32' ? 'npm.cmd': 'npm', ['install'], {cwd: `./${name}`})
+  log(chalk.green(`
+  👌安装完成：
+  To get Start:
+  ===========================
+      cd ${name}
+      npm run serve
+  ===========================
+              `))
+  const open = require('open')
+
+  open('http://localhost:8000')
+  await spawn(process.platform === 'win32' ? 'npm.cmd': 'npm', ['install'], {cwd: `./${name}`})
 }
