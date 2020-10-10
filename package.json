@@ -6,6 +6,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "koa": "^2.13.0",
+    "koa-session": "^6.1.0",
     "mongodb": "^3.6.2",
     "mongoose": "^5.10.8"
   },
