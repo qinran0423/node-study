@@ -11,7 +11,7 @@ http.createServer((req, res) => {
   const cookie = req.headers.cookie
 
 
-  if(cookie && cookie.indexOf(sessionKey) > -1) {
+  if(cookie && cookie.indexOf(sessionKey) > -1) { 
     // 存在sid
     console.log('come back');
     const pattern = new RegExp(`${sessionKey}=([^;]+);?\s*`)

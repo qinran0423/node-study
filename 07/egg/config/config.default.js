@@ -13,7 +13,7 @@ module.exports = appInfo => {
   const config = exports = {};
 
   // use for cookie sign key, should change to your own and keep security
-  config.keys = appInfo.name + '_1602543796054_4898';
+  config.keys = appInfo.name + '_1602558641749_1854';
 
   // add your middleware config here
   config.middleware = [];
@@ -21,14 +21,6 @@ module.exports = appInfo => {
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
-    sequelize: {
-      dialect: "mysql",
-      host: "127.0.0.1",
-      port: 3306,
-      username: "root",
-      password: "example",
-      database: "kaikeba"
-    }
   };
 
   return {

@@ -1,16 +1,12 @@
+'use strict';
+
 const Controller = require('egg').Controller;
 
 class UserController extends Controller {
   async index() {
-    // this.ctx.body = {
-    //   name: 'Randy'
-    // }
-    
-    const {ctx } = this
-    ctx.body = await ctx.service.user.getAll()
-  
+    const { ctx } = this;
+    ctx.body = 'hi, randy';
   }
 }
 
-
-module.exports = UserController
+module.exports = UserController;
